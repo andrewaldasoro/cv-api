@@ -33,7 +33,7 @@ app.use(function (err, req, res, next) {
 
   // send the error
   res.status(err.status || 500)
-  res.send('Bad request')
+  res.send(err.message)
 })
 
 module.exports = app

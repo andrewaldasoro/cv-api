@@ -13,6 +13,5 @@ describe('Test app', () => {
   it('Should response error to unknown path', async () => {
     const response = await request(app).get('/error/error-path')
     expect(response.statusCode).toBe(404)
-    expect(response.text).toBe('Bad request')
   })
 })
