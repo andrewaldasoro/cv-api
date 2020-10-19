@@ -12,7 +12,7 @@ const BITMOJI = [
   '76c3b171-f0cf-4dd6-b91f-91bd86693f61'
 ]
 
-/* GET health. */
+/* GET bitmoji. */
 router.get('/', function (_, res, next) {
   const bitmojiUrl = `https://sdk.bitmoji.com/render/panel/${BITMOJI[Math.floor(Math.random() * BITMOJI.length)]}-36692507-a781-4645-83d1-17df60d447bc-v1.png?transparent=1&palette=1`
   var image
