@@ -22,6 +22,7 @@ router.get('/', function (_, res, next) {
     encoding: null // This is actually important, or the image string will be encoded to the default encoding
   }, (error, _, body) => {
     if (error) next(error)
+    if (!body) res.status(401).send('body is undefined') // TODO no connection
 
     image = body.toString('base64')
     res.status(200).send(`data:image/png;base64,${image}`)
