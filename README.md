@@ -1,4 +1,4 @@
-<h1 align="center">:memo:<tt>My Resume / CV API</tt></h1>
+<h1 align="center">:toolbox:<tt>My Resume / CV API</tt></h1>
 
 <blockquote align="center">A portafolio to show what I can do with React</blockquote>
 <p align="center">
