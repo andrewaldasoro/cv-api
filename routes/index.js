@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
   res.status(200).send('')
 })
 
-router.get('/', function (req, res, next) {
+router.get('/vesion', function (req, res, next) {
   res.status(200).send(pjson.version)
 })
 
