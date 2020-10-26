@@ -18,7 +18,8 @@ app.set('view engine', 'jade')
 
 app.use(logger('dev'))
 app.use(cors({
-  origin: /\.andrewaldasoro\.me$/,
+  origin: ['https://andrewaldasoro.me', /\.andrewaldasoro\.me$/],
+  // origin: 'http://localhost:4000',
   methods: ['GET', 'POST'],
   optionsSuccessStatus: 200
 }))
