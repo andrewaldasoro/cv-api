@@ -7,7 +7,7 @@ var logger = require('morgan')
 
 var indexRouter = require('./routes/index')
 var bitmojiRouter = require('./routes/bitmoji')
-var torontoCovid19Router = require('./routes/toronto-covid19')
+var torontoOpenDataRouter = require('./routes/toronto')
 var mapboxTokenRouter = require('./routes/mapbox-token')
 
 var app = express()
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/bitmoji', bitmojiRouter)
-app.use('/toronto-covid19', torontoCovid19Router)
+app.use('/toronto', torontoOpenDataRouter)
 app.use('/mapbox-token', mapboxTokenRouter)
 
 // catch 404 and forward to error handler
