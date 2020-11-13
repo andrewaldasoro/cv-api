@@ -7,8 +7,8 @@ const apiPath = '/api/3/action'
 const apiUrl = baseUrl + apiPath
 
 const requestsMap = new Map([
-  ['/covid-cases', '64b54586-6180-4485-83eb-81e8fae3b8fe'],
-  ['/neighbourhoods', '4def3f65-2a65-4a4f-83c4-b2a4aed72d46']
+  ['/covid(-cases)?', '64b54586-6180-4485-83eb-81e8fae3b8fe'],
+  ['/neighbou?rhoods?', '4def3f65-2a65-4a4f-83c4-b2a4aed72d46']
 ])
 
 router.get('/request', function (req, res, next) {
