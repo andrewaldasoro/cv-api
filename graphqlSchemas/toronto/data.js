@@ -1,6 +1,7 @@
 const {
   GraphQLBoolean,
   GraphQLInt,
+  GraphQLFloat,
   GraphQLID,
   GraphQLString,
   GraphQLObjectType,
@@ -19,7 +20,19 @@ const neighbourhoodType = new GraphQLObjectType({
   fields: {
     geometry: { type: GraphQLString, resolve: root => root.geometry },
     areaId: { type: GraphQLString, resolve: root => root.AREA_ID },
-    areaName: { type: GraphQLString, resolve: root => root.AREA_NAME }
+    areaName: { type: GraphQLString, resolve: root => root.AREA_NAME },
+    areaAttrId: { type: GraphQLInt, resolve: root => root.AREA_ATTR_ID },
+    parentAreaId: { type: GraphQLInt, resolve: root => root.PARENT_AREA_ID },
+    areaShortCode: { type: GraphQLString, resolve: root => root.AREA_SHORT_CODE },
+    areaLongCode: { type: GraphQLString, resolve: root => root.AREA_LONG_CODE },
+    areaDesc: { type: GraphQLString, resolve: root => root.AREA_DESC },
+    x: { type: GraphQLInt, resolve: root => root.X },
+    y: { type: GraphQLInt, resolve: root => root.Y },
+    longitude: { type: GraphQLInt, resolve: root => root.LONGITUDE },
+    latitude: { type: GraphQLInt, resolve: root => root.LATITUDE },
+    objectId: { type: GraphQLInt, resolve: root => root.OBJECTID },
+    shapeArea: { type: GraphQLFloat, resolve: root => root.Shape__Area },
+    shapeLenght: { type: GraphQLFloat, resolve: root => root.Shape__Length }
   }
 })
 
