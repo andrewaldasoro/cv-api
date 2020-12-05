@@ -1,6 +1,6 @@
-var express = require('express')
-var router = express.Router()
-var request = require('request')
+const express = require('express')
+const router = express.Router()
+const request = require('request')
 
 const BITMOJI = [
   '9e669e76-bd42-43ba-bc81-83741de280f5',
@@ -15,7 +15,6 @@ const BITMOJI = [
 /* GET bitmoji. */
 router.get('/', function (_, res, next) {
   const bitmojiUrl = `https://sdk.bitmoji.com/render/panel/${BITMOJI[Math.floor(Math.random() * BITMOJI.length)]}-36692507-a781-4645-83d1-17df60d447bc-v1.png?transparent=1&palette=1`
-  var image
   request({
     url: bitmojiUrl,
     method: 'GET',
@@ -24,7 +23,7 @@ router.get('/', function (_, res, next) {
     if (error) next(error)
     if (!body) res.status(401).send('body is undefined') // TODO no connection
 
-    image = body.toString('base64')
+    const image = body.toString('base64')
     res.status(200).send(`data:image/png;base64,${image}`)
   })
 })

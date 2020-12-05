@@ -1,5 +1,5 @@
-var request = require('supertest')
-var app = require('./app.js')
+const request = require('supertest')
+const app = require('./app.js')
 
 describe('Test app', () => {
   it('Should response to root (GET method)', async () => {

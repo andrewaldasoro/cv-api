@@ -1,22 +1,24 @@
-var createError = require('http-errors')
-var express = require('express')
-var cors = require('cors')
-var path = require('path')
-var cookieParser = require('cookie-parser')
-var logger = require('morgan')
+const createError = require('http-errors')
+const express = require('express')
+const cors = require('cors')
+const path = require('path')
+const helmet = require('helmet')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
 
-var indexRouter = require('./routes/index')
-var bitmojiRouter = require('./routes/bitmoji')
-var torontoOpenDataRouter = require('./routes/toronto')
-var mapboxTokenRouter = require('./routes/mapbox-token')
+const indexRouter = require('./routes/index')
+const bitmojiRouter = require('./routes/bitmoji')
+const torontoOpenDataRouter = require('./routes/toronto')
+const mapboxTokenRouter = require('./routes/mapbox-token')
 
-var app = express()
+const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'jade')
 
 app.use(logger('dev'))
+app.use(helmet())
 app.use(cors({
   origin: ['https://andrewaldasoro.me', /\.andrewaldasoro\.me$/],
   // origin: 'http://localhost:4000',

@@ -1,6 +1,6 @@
-var express = require('express')
-var router = express.Router()
-var request = require('request')
+const express = require('express')
+const router = express.Router()
+const request = require('request')
 
 router.get('/create', function (_, res, next) {
   // console.log('"' + process.env.MAPBOX_ACCESS_TOKEN + '"')
